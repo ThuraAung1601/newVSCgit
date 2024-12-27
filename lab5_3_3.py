@@ -1,3 +1,6 @@
+from lab5_3_1 import Disk
+from lab5_3_2 import Pole
+
 class Hanoi(object):
     def __init__(self, n=3, start="A", workspace="B", destination="C"):
         self.startp = Pole(start, 0, 0)
