@@ -78,6 +78,30 @@ class Simple_drawing_window2(QWidget):
 
         p.end()
 
+class Simple_drawing_window3(QWidget):
+    def __init__(self):
+        QWidget.__init__(self, None)
+        self.setWindowTitle("Simple GitHub Drawing2")
+        self.rabbit = QPixmap("images/rabbit.jpg")
+
+    def paintEvent(self, e):
+        p = QPainter()
+        p.begin(self)
+
+        p.setPen(QColor(0, 0, 127))
+        p.setBrush(QColor(255, 127, 0))
+
+        p.drawPolygon(
+            [QPoint( 50, 300), QPoint(200, 300), QPoint(200, 50),]
+        )
+
+        p.setPen(QColor(0,0,0))
+        p.setBrush(QColor(0, 0, 127))
+        p.drawEllipse(50, 150, 200, 50)
+
+        p.end()
+
+
 def main():
     app = QApplication(sys.argv)
     w = Simple_drawing_window2()
