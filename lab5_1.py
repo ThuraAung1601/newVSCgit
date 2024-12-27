@@ -28,11 +28,6 @@ class Simple_drawing_window(QWidget):
         p.drawPixmap(QRect(200,100,320,320), self.rabbit)
         p.end()
 
-    def main():
-        app = QApplication(sys.argv)
-        w = Simple_drawing_window()
-        w.show()
-        return app.exec()
     
 
 class Simple_drawing_window1(QWidget):
@@ -45,11 +40,12 @@ class Simple_drawing_window1(QWidget):
         p = QPainter()
         p.begin(self)
 
-        p.setPen(QColor(0,0,0))
-        p.setBrush(QColor(0,127,0))
+        p.setPen(QColor(10,10,10))
+        p.setBrush(QColor(20,127,0))
         p.drawPolygon([
-            QPoint(70,100), QPoint(100,110), QPoint(130,100), QPoint(100,150),
+            QPoint(200,40), QPoint(160,110), QPoint(100,100),
         ])
+
 
         p.setPen(QColor(255,127,0))
         p.setBrush(QColor(0,127,0))
@@ -62,8 +58,10 @@ class Simple_drawing_window1(QWidget):
 
 def main():
     app = QApplication(sys.argv)
-    w = Simple_drawing_window()
-    w.show()
+    # w = Simple_drawing_window()
+    w1 = Simple_drawing_window1()
+    # w.show()
+    w1.show()
     return app.exec()
     
 
