@@ -16,5 +16,5 @@ class Disk(object):
         pass
 
     def cleardisk(self):
-        # Your code
+        # Your code 
         pass
